@@ -368,6 +368,9 @@ string averages_test(vector<pair<CCLPointer, string>>& CCLAlgorithms, Mat1d& all
                 continue;
             }
 
+			Rect r(0, 0, binaryImg.size().width / 2 * 2, binaryImg.size().height / 2 * 2);
+			binaryImg = binaryImg(r);
+
             unsigned int i = 0;
             // For all the Algorithms in the array
             for (auto it = CCLAlgorithms.begin(); it != CCLAlgorithms.end(); ++it, ++i){

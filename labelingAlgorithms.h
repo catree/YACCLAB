@@ -55,6 +55,11 @@
 #include "labelingNULL.h"
 // Optimized Connected Components Labeling with Pixel Prediction
 #include "labelingPred.h"
+#include "labelingSpaghetti.h"
+#include "labelingSpaghetti1.h"
+#include "labelingSpaghetti2.h"
+#include "labelingSpaghetti3.h"
+#include "labelingSpaghetti4.h"
 
 // FUNCTION POINTER: 
 //	Mat1b:	the 8-bit single-channel image to be labeled;
@@ -88,6 +93,11 @@ std::map<std::string, CCLPointer> CCLAlgorithmsMap =
 	new_algorithm(SBLA),
 	new_algorithm(SBLA_OPT),
 	// NULL
-	new_algorithm(labelingNULL)
+	new_algorithm(labelingNULL),
+	new_algorithm(Spaghetti),
+	new_algorithm(Spaghetti1),
+	new_algorithm(Spaghetti2),
+	new_algorithm(Spaghetti3),
+	new_algorithm(Spaghetti4),
 };
 // Map of connected components algorithms: functions's name (first), pointer to algorithm (second)
